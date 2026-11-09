@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Blocks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/theme.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+    <script defer src="scripts/app.js"></script>
+</head>
+<body>
+    <main class="page">
+        <section class="card-container" aria-label="Pré-visualização do bloco de código">
+            <article class="code-card" aria-label="Bloco de código">
+                <header class="card-header">
+                    <span class="app-label">code-blocks</span>
+                    <div class="file-details">
+                        <input
+                            class="file-name"
+                            type="text"
+                            aria-label="Nome do arquivo"
+                            size="1"
+                            value="Program"
+                        >
+                        <span class="file-extension">.cs</span>
+                    </div>
+                    <select class="language-select" aria-label="Linguagem do código">
+                        <option value="css">CSS</option>
+                        <option value="csharp" selected>C#</option>
+                        <option value="html">HTML</option>
+                        <option value="java">Java</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="sql">SQL</option>
+                        <option value="typescript">TypeScript</option>
+                    </select>
+                </header>
+
+                <div class="code-content">
+                    <pre class="code-highlight" aria-hidden="true"><code></code></pre>
+                    <textarea
+                        class="code-input"
+                        aria-label="Código C#"
+                        autocapitalize="off"
+                        autocomplete="off"
+                        autocorrect="off"
+                        placeholder="Digite ou cole seu código aqui..."
+                        spellcheck="false"
+                        wrap="soft"
+                    ></textarea>
+                </div>
+            </article>
+
+            <p class="editor-status" role="status" aria-live="polite"></p>
+
+            <div class="export-actions" aria-label="Exportar card">
+                <button class="export-button" type="button" data-export-format="svg">Exportar SVG</button>
+                <button class="export-button" type="button" data-export-format="png">Exportar PNG</button>
+                <span class="export-status" role="status" aria-live="polite"></span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
